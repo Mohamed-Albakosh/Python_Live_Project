@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+
+    {% block stylesheets %}
+    {{ block.super}}
+        <link rel="stylesheet" type="text/css" href="{% static 'SoccerPhotoApp/Soccer_style.css' %}">
+    {% endblock %}
+    {% block pagetop-css %}cover-Photo{% endblock%}
+    {% block title %}Soccer Sports{% endblock %}
+
+    {% block page-title %}Soccer World Cup{% endblock %}
+    {% block page-subtitle %}Enjoy world soccer news!{% endblock %}
+    {% block button1 %}<a href="{% url 'registerPage' %}" class="contact-btn">Register</a>{% endblock %}
+    {% block button2 %}<a href="{% url 'SoccerTeam' %}" class="contact-btn">Teams</a>{% endblock %}
+    {% block button3 %}<a href="{% url 'DetailsPage' %}" class="contact-btn">Details</a>{% endblock %}
+
+{% block appcontent %}
+     {% block templatecontent %}{% endblock %}
+{% endblock %}

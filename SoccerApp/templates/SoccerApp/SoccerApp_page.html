@@ -1,0 +1,210 @@
+{% extends 'SoccerApp/SoccerApp_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<div class="admin_panel">
+ <h1> Players</h1>
+<table class="table table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Player Name</th>
+      <th scope="col">Player Address</th>
+      <th scope="col">Player Phone</th>
+        <th scope="col">Player Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for player in players %}
+      <th scope="row"></th>
+      <td>
+          <ul>
+              <li>{{ player.PlayerName }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ player.PlayerAddress}}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ player.PlayerPhoneNumber }}</li>
+          </ul>
+      </td>
+        <td>
+          <ul>
+              <li>{{ player.PlayerEmailAddress }}</li>
+
+          </ul>
+      </td>
+         <td>
+                 <a href="./{{player.pk}}/PlayerDetail/"><button id="btn" type="button"  >Details</button></a>
+         </td>
+    </tr>
+{% endfor %}
+
+  </tbody>
+</table>
+<!-- Soccer Teams Table-->
+    <h1> Teams</h1>
+    <table class="table table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Team Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+         {% for team in teams %}
+      <th scope="row"></th>
+
+      <td>
+          <ul>
+              <li>{{ team.TeamName }}</li>
+
+          </ul>
+      </td>
+        <td>
+            <a href="./{{team.pk}}/TeamDetail/"><button id="btn" type="button"  >Details</button></a>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- Coaches Table -->
+    <h1> Coaches</h1>
+<table class="table table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Coach Name</th>
+      <th scope="col">Coach Address</th>
+      <th scope="col">Coach Phone</th>
+        <th scope="col">Coach  Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for coach in coaches %}
+      <th scope="row"></th>
+      <td>
+          <ul>
+              <li>{{ coach.CoachName }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ coach.CoachAddress }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ coach.CoachPhoneNumber }}</li>
+
+          </ul>
+      </td>
+        <td>
+          <ul>
+              <li>{{ coach.CoachEmailAddress }}</li>
+          </ul>
+      </td>
+     <td>
+          <a href="./{{coach.pk}}/CoachDetail/"><button id="btn" type="button"  >Details</button></a>
+     </td>
+
+  </tbody>
+    {% endfor %}
+</table>
+
+<!-- Referees Table-->
+    <h1> Referees</h1>
+<table class="table table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Referee Name</th>
+      <th scope="col">Referee Address</th>
+      <th scope="col">Referee Phone</th>
+        <th scope="col">Referee  Email</th>
+        <th scope="col">Referee  Kind</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+         {% for referee in referees %}
+      <th scope="row"></th>
+      <td>
+          <ul>
+              <li>{{ referee.RefereeName }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ referee.RefereeAddress }}</li>
+
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ referee.RefereePhoneNumber }}</li>
+          </ul>
+      </td>
+        <td>
+          <ul>
+              <li>{{ referee.RefereeEmailAddress }}</li>
+          </ul>
+      </td>
+        <td>
+          <ul>
+              <li>{{ referee.RefereeKind }}</li>
+          </ul>
+      </td>
+        <td>
+          <a href="./{{referee.pk}}/RefereeDetail/"><button id="btn" type="button"  >Details</button></a>
+      </td>
+    </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+    <!-- Tournament Table -->
+<h1> Tournaments </h1>
+<table class="table table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+        <th scope="col">Tournament Address</th>
+      <th scope="col">Tournament Date</th>
+        <th scope="col">Tournament  Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {% for so in soccer %}
+      <th scope="row"></th>
+      <td>
+          <ul>
+              <li>{{ so.MatchAddress }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ so.MatchDate }}</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>{{ so.MatchTime }}</li>
+          </ul>
+      </td>
+        <td>
+          <a href="./{{so.pk}}/TournamentDetail/"><button id="btn" type="button"  >Details</button></a>
+       </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

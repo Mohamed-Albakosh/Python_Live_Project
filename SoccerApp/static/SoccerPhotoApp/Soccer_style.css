@@ -1,0 +1,273 @@
+.cover-Photo {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/soccerapp.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+  }
+.Photo_center{
+      display:inline-block;
+      padding:2px 3px;
+      color: var(--black);
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+      line-height:1.5em;
+  }
+    .Photo button{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border: 1px solid var(--dark);
+      background: transparent;
+      color: var(--dark);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .Photo button:hover {
+    background: var(--dark);
+    color: white;
+    }
+
+    .Photo table{
+      width: 75%;
+      align: center;
+      margin: 20px auto;
+      border: 40px 20px 10px 20px;
+    }
+
+    .Photo hr{
+      color: var(--lightGray);
+      border-top-width: 2px;
+      margin: 2px;
+    }
+  .Photo h4{
+      color: var(--midtone);
+      text-align: center;
+      text-shadow: 2px 2px var(--standout);
+  }
+  .photo select, label{
+      color: white;
+      background: var(--dark);
+      display: flex;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 5px;
+  }
+    #PhotoDonePage {
+      padding: 40px;
+  }
+
+  .Photo h4{
+      color: var(--midtone);
+      text-align: center;
+      text-shadow: 2px 2px var(--standout);
+  }
+
+  .Photo select, label{
+      color: white;
+      background: var(--dark);
+      display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  div #PhotoPic{
+      text-align: center;
+      position: relative;
+      padding:0;
+  }
+
+  #PhotoPic span{
+      width: 100%;
+  }
+  .Photo_top {
+   background:transparent!important;
+      display:inline-block;
+      padding:2px 3px;
+      position:relative;
+      top: -230px;
+      width:100%;
+      color: var(--neutral);
+      text-shadow: 2px 2px 5px var(--dark);
+  }
+
+  .Photo_center{
+      display:inline-block;
+      padding:2px 3px;
+      color: var(--dark);
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+      line-height:1.5em;
+  }
+  .Photo_caption{
+      background:var(--contrast);
+      color:var(--lightGray)
+      text-decoration:none;
+      padding:4px 6px;
+      font-family: Montserrat Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+      font-size:18px;
+      font-weight:bold;
+      line-height:1.2;
+      display:inline-block;
+      position: absolute;
+      right: 25%;
+  }
+
+  #PhotoPage {
+      padding: 40px;
+  }
+
+  #Photo_Page table th
+   {
+      background:var(--dark);
+      color: white;
+      text-align:center;
+      font-size: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  #Photo_Page table td
+   {
+       background:var(--dark);
+       color: white;
+       text-align:center;
+       font-size: 18px;
+  }
+
+  #info-button {
+      background: white;
+      color: var(--dark);
+
+  }
+  #info-button:hover {
+      background: var(--dark);
+      color: white;
+  }
+  /* =====  Specific styling Photo App // END =====*/
+  /* This controls the form size and contents */
+.admin_panel {
+    margin: 0 auto;
+    width: 50%;
+    height: 80%;
+    background-color: #fffaf4;
+	border: 1px solid #d6d6d6;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	transition: all 0.3s ease-in-out;
+	border-radius: 10px;
+    transition: 0.3s;
+}
+.admin_panel:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+
+
+/* form item container */
+.frmObject_container {
+	display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+/* form button container */
+.frmBtn_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+#btn {
+	flex-grow: 2;
+    justify-content: center;
+    text-align: center;
+    display:inline-block;
+    width: 150px; /* button size */
+    margin: 2% 2% 2% 2%;
+    color: black;
+    padding: 10px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+#btn:hover {
+    background-color: #355664;
+    color: white;
+    border: 2px solid #b3b3b3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+input[type="submit"] {
+    flex-grow: 1;
+    width: 10%;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    margin: 2% 2% 2% 2%;
+    color: black;
+    padding: 9px 0px 9px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    background-color: #355664;
+    color: white;
+    border: 2px solid #b3b3b3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+select {
+	padding: 4px 10px;
+	width: 40%;
+	display: inline-block;
+	margin: 1% 0% 0 1%;
+	border: 2px solid silver;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #E8E8E8 inset;
+}
+input, textarea {
+    width: 100%;
+    margin: 1% 0 0 0;
+    padding: 1% 0 2% 1%;
+    line-height: 18px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+label {
+	display: inline-block;
+    width: 95%;
+    text-align: left;
+    margin: 1% 0 0 0;
+    color: black;
+    line-height: 18px;
+    font-size: 20px;
+    background: transparent;
+}
+
+h1 {
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color:block;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}

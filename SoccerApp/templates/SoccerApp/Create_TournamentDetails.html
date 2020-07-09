@@ -1,0 +1,25 @@
+{% extends 'SoccerApp/SoccerApp_base.html' %}
+
+{% load staticfiles %}
+{% block templatecontent %}
+<div class="admin_panel">
+    <form method="POST" id="thisForm" action="../TournamentDetail/">
+        <div class="frmObject_container">
+
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+
+        <div class="frmBtn_container">
+            <input type="submit">
+
+            <a href="../{{ form.pk }}RefereeDelete/"><button id="btn" type="button" >DELETE</button></a>
+               <a href="{% url 'SoccerTeam'%}"> <button id="btn" type="button" >Cancel</button></a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'SoccerApp/SoccerApp_base.html' %}
+
+{% load staticfiles %}
+
+{% block templatecontent %}
+
+<div class="admin_panel">
+        <form method="POST" action="{% url 'registerPage' %}">
+
+            <h1>Registartion Page</h1>
+            <div class="frmBtn_container">
+
+
+                <a href="{% url 'registerForPlayer' %}"><button type="button" id="btn" >Player</button></a>
+                <a href="{% url 'registerForTeam' %}"><button type="button" id="btn" >Team</button></a>
+                <a href="{% url 'registerForCoach' %}"><button type="button" id="btn" >Coach</button></a>
+                <a href="{% url 'registerForReferee' %}"><button type="button"  id="btn" >Referee</button></a>
+                <a href="{% url 'registerForTournament' %}"><button type="button" id="btn" >Tournament</button></a>
+                <a href="{% url 'SoccerTeam' %}"><button type="button" id="btn" value="Cancel">Cancel</button></a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

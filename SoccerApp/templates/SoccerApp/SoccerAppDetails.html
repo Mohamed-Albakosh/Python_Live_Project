@@ -1,0 +1,16 @@
+{% extends 'SoccerApp/SoccerApp_base.html' %}
+
+{% load staticfiles %}
+
+{% block templatecontent %}
+
+<div class="admin_panel">
+        <form method="POST" action="{% url 'DetailsPage' %}">
+
+            <h1>Details Page</h1>
+            <div class="frmBtn_container">
+                <a href="{% url 'TeamDetails' %}"><button type="button" id="btn" >Team Details</button></a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

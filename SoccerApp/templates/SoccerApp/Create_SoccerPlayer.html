@@ -1,0 +1,19 @@
+{% extends 'SoccerApp/SoccerApp_base.html' %}
+
+{% load staticfiles %}
+{% block templatecontent %}
+<div class="admin_panel">
+        <form method="POST" action="{% url 'registerForPlayer' %}">
+            <div class="frmObject_container">
+                <!-- Cross Site Request Forgery (csrf_token) protection -->
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_p }}
+            </div>
+            <div class="frmBtn_container">
+                <input type="submit" id="btn" value="New Player" name="Save_Item">
+                <a href="{% url 'registerPage' %}"><button type="button" id="btn" value="Cancel">Cancel</button></a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
